@@ -1,5 +1,8 @@
 package com.product_service.entity;
 
+
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -27,6 +30,7 @@ public class Category {
 
     // One category can have multiple products
     @OneToMany(mappedBy = "category", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnore
     private List<Product> products;
 
 

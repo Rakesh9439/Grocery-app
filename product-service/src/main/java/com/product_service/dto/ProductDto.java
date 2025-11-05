@@ -25,8 +25,13 @@ public class ProductDto {
 
     private String imageUrl;
 
+    private Long categoryId;
+
+    private String status;
+
     // Many products belong to one category
-    private Category category;
+    //private Category category;
+    private String categoryName;
 
     public Long getId() {
         return id;
@@ -76,11 +81,35 @@ public class ProductDto {
         this.imageUrl = imageUrl;
     }
 
-    public Category getCategory() {
-        return category;
+   // public Category getCategory() {
+   //     return category;
+   // }
+
+   // public void setCategory(Category category) {
+ //       this.category = category;
+ //   }
+
+    public Long getCategoryId() {
+        return categoryId;
     }
 
-    public void setCategory(Category category) {
-        this.category = category;
+    public void setCategoryId(Long categoryId) {
+        this.categoryId = categoryId;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getCategoryName() {
+        return categoryName;
+    }
+
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
     }
 }
