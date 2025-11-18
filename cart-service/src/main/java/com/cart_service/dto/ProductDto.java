@@ -1,8 +1,9 @@
-package com.product_service.dto;
+package com.cart_service.dto;
 
-import com.product_service.entity.Category;
-import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.math.BigDecimal;
 

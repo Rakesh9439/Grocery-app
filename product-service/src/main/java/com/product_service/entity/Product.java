@@ -1,5 +1,8 @@
 package com.product_service.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -30,9 +33,13 @@ public class Product {
     private String imageUrl;
 
     // Many products belong to one category
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "category_id", nullable = false)
+   // @JsonBackReference
     private Category category;
+
+    // ✅ Add this new field
+    private String status;
 
 
     public Long getId() {
@@ -89,5 +96,13 @@ public class Product {
 
     public void setCategory(Category category) {
         this.category = category;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

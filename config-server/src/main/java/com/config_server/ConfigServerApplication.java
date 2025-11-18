@@ -1,16 +1,16 @@
-package com.product_service;
+package com.config_server;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
-
 @SpringBootApplication
 @EnableDiscoveryClient
-public class ProductServiceApplication {
+
+public class ConfigServerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ProductServiceApplication.class, args);
+		SpringApplication.run(ConfigServerApplication.class, args);
 	}
 
 }
